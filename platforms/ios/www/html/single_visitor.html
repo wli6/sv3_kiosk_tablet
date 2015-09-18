@@ -1,0 +1,55 @@
+<div class="overlay overlay-hugeinc" id="visitor-overlay">
+  <nav class="visitor-nav">
+    <ul>
+      <li>
+        <a><i class="fa fa-user"></i> Name</a>
+        <p class="name">{{visitor.name}}</p>
+      </li>
+      <li>
+        <a><i class="fa fa-birthday-cake"></i> DOB</a>
+        <p class="dob">{{visitor.dob | date:'MM/dd/yyyy'}}</p>
+      </li>
+      <li ng-if="visitor.piv_id">
+        <a><i class="fa fa-credit-card"></i> PIV Card Number</a>
+        <p class="idnumber">{{visitor.piv_id}}</p>
+      </li>
+      <li ng-if="visitor.dln">
+        <a><i class="fa fa-credit-card"></i> Driver's License Number</a>
+        <p class="idnumber">{{visitor.dln}}</p>
+      </li>
+      <li ng-if="visitor.passport_id">
+        <a><i class="fa fa-plane"></i> Passport Number</a>
+        <p class="idnumber">{{visitor.passport_id}}</p>
+      </li>
+      <li ng-if="visitor.image">
+        <p><img class="visitor-license-photo" ng-src="{{visitor.image}}" alt="License Info"></p>
+      </li>
+    </ul>
+  </nav>
+  <nav class="visitor-nav">
+    <ul>
+      <li>
+        <a><i class="fa fa-building"></i> Visit Details</a>
+        <p class="address">Visiting {{visitor.tenant.primary_contact.name}} <br> {{visitor.tenant.name}} in {{visitor.tenant.secondary_address}}</p>
+      </li>
+      <li>
+        <a><i class="fa fa-calendar-o"></i> Visit Date & Time</a>
+        <p class="address">{{visitor.visit_date | date: 'MM/dd/yy'}} <br> {{visitor.visit_start_time}} - {{visitor.visit_end_time}}</p>
+      </li>
+      <li>
+        <div class="progress-button" ng-if="!pastVisit">
+          <button><span>Check In</span></button>
+          <svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+          <svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+          <svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+        </div><!-- /progress-button -->
+        <div class="progress-button" ng-if="pastVisit">
+          <button><span>Check Out</span></button>
+          <svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+          <svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+          <svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+        </div><!-- /progress-button -->
+      </li>
+    </ul>
+  </nav>
+</div>

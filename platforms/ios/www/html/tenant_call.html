@@ -1,0 +1,55 @@
+<back-btn></back-btn>
+<div class="search-letter-box">
+  <h1>Search Tenants</h1>
+  <hr>
+  <div class="letter-box-options">
+    <div class="letter-box" ng-repeat="val in letters" ng-click="updateQuery(val)">
+      {{val}}
+    </div>
+
+    <br><br>
+
+    <div class="letter-box" ng-repeat="val in numSymbols" ng-click="updateQuery(val)">
+      {{val}}
+    </div>
+
+    <br><br>
+
+    <div class="letter-box symbols" ng-repeat="val in optSymbols" ng-click="updateQuery(val)">
+      {{val}}
+    </div>
+  </div>
+</div>
+<div class="search-results-box">
+  <pre id="query-string">Search: {{queryString}}<span id="blink-cursor">|</span></pre>
+  <div class="white-space"></div>
+  <h3 ng-if="noResults" id="search-and-call">No tenants found. Please check the tenant's name or visit a guard for assistance.</h3>
+  <div class="result-box" ng-repeat="r in results | filter:queryString | orderBy:'-visit_start_time'" ng-click="overlayToggle(); callTenant(r)">
+    <h3>{{r.name | uppercase}} in {{r.company_name | uppercase}}</h3>
+    <hr>
+    <strong>Located: </strong>{{r.locations[0]}} <br>
+  </div>
+</div>
+<div class="overlay overlay-hugeinc" id="phone-overlay">
+  <nav class="phone-nav">
+    <h1 ng-click="overlayToggle()">{{callText}}</h1>
+    <h3>{{callLength}}</h3>
+    <ul>
+      <li class="phone-numpad">
+        <span ng-click="sendTwilioOption(1)">1</span>
+        <span ng-click="sendTwilioOption(2)">2</span>
+        <span ng-click="sendTwilioOption(3)">3</span>
+        <span ng-click="sendTwilioOption(4)">4</span>
+        <span ng-click="sendTwilioOption(5)">5</span>
+        <span ng-click="sendTwilioOption(6)">6</span>
+        <span ng-click="sendTwilioOption(7)">7</span>
+        <span ng-click="sendTwilioOption(8)">8</span>
+        <span ng-click="sendTwilioOption(9)">9</span>
+        <span ng-click="sendTwilioOption('*')">*</span>
+        <span ng-click="sendTwilioOption(0)">0</span>
+        <span ng-click="sendTwilioOption('#')">#</span>
+      </li>
+      <li ng-click="hangup()"><h1><i class="fa fa-phone-square"></i></h1></li>
+    </ul>
+  </nav>
+</div>

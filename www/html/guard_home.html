@@ -1,0 +1,57 @@
+<!-- need to move this elsewhere -->
+<style>
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: #c1c1c1 url(../images/nyc-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  font-size: 1em;
+  /*font-family: Arial, sans-serif;*/
+  min-height: 500px;
+}
+
+h1 {
+  color: #74777b !important;
+}
+
+h1 span {
+  color: #a4aaab !important;
+}
+</style>
+
+<div class="overlay overlay-hugeinc" id="signin-overlay">
+  <nav class="phone-nav">
+    <h1>Welcome to VMS <em>beta</em></h1>
+    <h3>Please Sign In</h3>
+    <ul>
+      <li>
+        <span class="input input--haruki">
+          <input class="input__field input__field--haruki" type="text" id="userinfo-name" ng-model="userInfo.name" />
+          <label class="input__label input__label--haruki" for="userinfo-name">
+            <span class="input__label-content input__label-content--haruki">Username</span>
+          </label>
+        </span>
+      </li>
+      <li>
+        <span class="input input--haruki">
+          <input class="input__field input__field--haruki" type="password" id="userinfo-pwd" ng-model="userInfo.password" />
+          <label class="input__label input__label--haruki" for="userinfo-pwd">
+            <span class="input__label-content input__label-content--haruki">Password</span>
+          </label>
+        </span>
+      </li>
+      <li>
+        <div class="progress-button" ng-click="signIn(userInfo)">
+          <button><span>Sign In</span></button>
+          <svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+          <svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+          <svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>

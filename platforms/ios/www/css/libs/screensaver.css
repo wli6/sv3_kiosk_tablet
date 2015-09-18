@@ -1,0 +1,8 @@
+#screensaver { position: relative }
+#screensaver img.active { z-index: 3; }
+#screensaver img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}

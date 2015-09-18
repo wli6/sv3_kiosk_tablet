@@ -1,0 +1,37 @@
+<back-btn></back-btn>
+<div class="search-letter-box">
+  <h1>Who are you visiting?</h1>
+  <hr>
+  <div class="letter-box-options">
+    <div class="letter-box" ng-repeat="val in letters" ng-click="updateQuery(val)">
+      {{val}}
+    </div>
+
+    <br><br>
+
+    <div class="letter-box" ng-repeat="val in numSymbols" ng-click="updateQuery(val)">
+      {{val}}
+    </div>
+
+    <br><br>
+
+    <div class="letter-box symbols" ng-repeat="val in optSymbols" ng-click="updateQuery(val)">
+      {{val}}
+    </div>
+  </div>
+</div>
+<div class="search-results-box">
+  <pre id="query-string">Search: {{queryString}}<span id="blink-cursor">|</span></pre>
+  <div class="white-space"></div>
+  <h3 ng-if="noResults" id="search-and-call" ng-click="tenantCall()">No scheduled visits found. <span>Tap here</span> to search and contact a tenant.</h3>
+  <div class="result-box" ng-repeat="r in results | filter:queryString | orderBy:'-visit_start_time'" ng-click="selectVisit(r)">
+    <h3>{{r.name}} at {{r.tenant.name}}</h3>
+    <hr>
+    <strong>At: </strong>{{r.visit_start_time}} - {{r.visit_end_time}}, {{r.visit_date | date: 'MM/dd/yy'}} <br>
+    <strong>Located: </strong>{{r.tenant.secondary_address | uppercase}} <br>
+    <strong>Primary Contact: </strong>{{r.tenant.primary_contact.name}}, {{r.tenant.primary_contact.position}}
+
+    <!-- <strong>DOB: </strong>{{r.dob | date: 'MM/dd/yyyy'}} <br> -->
+    <!-- <strong>Phone: </strong>{{r.tenant.primary_phone}} <br> -->
+  </div>
+</div>

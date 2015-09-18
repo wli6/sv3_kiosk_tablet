@@ -1,0 +1,18 @@
+{
+    "version": "0.0.4",
+    "name": "org.pluginporo.honeywell_mobile_scanner",
+    "cordova_name": "Honeywell Scanner Plugin",
+    "description": "Honeywell Scanner Plugin",
+    "license": "Apache 2.0",
+    "keywords": [
+        "cordova",
+        " honeywell",
+        " dolphin",
+        " scanner",
+        " plugin"
+    ],
+    "platforms": [
+        "android"
+    ],
+    "engines": []
+}

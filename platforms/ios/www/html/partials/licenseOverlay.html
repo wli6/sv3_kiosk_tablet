@@ -1,0 +1,47 @@
+<div class="overlay overlay-contentpush" id="overlay-second" style="padding-top:75px;">
+  <button type="button" class="overlay-close" ng-click="noLoading()">Close</button>
+  <nav class="visitor-nav">
+    <ul>
+      <li>
+        <a><i class="fa fa-user"></i> Visitor Name</a>
+        <p>{{visitor.name}}</p>
+      </li>
+      <li>
+        <a><i class="fa fa-birthday-cake"></i> DOB</a>
+        <p>{{visitor.dob}}</p>
+      </li>
+      <li ng-if="visitor.dln">
+        <a><i class="fa fa-credit-card"></i> Driver License Number</a>
+        <p>{{visitor.dln}}</p>
+      </li>
+      <li ng-if="visitorExtraInfo.face_img_b64">
+        <p><img class="visitor-license-photo" src="{{(visitorExtraInfo.face_img_b64 | base64: 'jpg')}}" alt="License Info"></p>
+      </li>
+    </ul>
+  </nav>
+  <nav class="visitor-nav">
+    <ul>
+      <li>
+        <a><i class="fa fa-user"></i> Visiting</a>
+        <p class="name">{{schedule.tenant_contact.name}}</p>
+        <a><i class="fa fa-building"></i> Tenant</a>
+        <p class="address">{{schedule.tenant.name}} {{schedule.tenant.floor}} {{schedule.tenant.suite}}</p>
+        <a><i class="fa fa-clock-o"></i> Time</a>
+        <p class="dob">{{schedule.visit_start_time | date:'HH:mm a'}} - {{schedule.visit_end_time | date:'HH:mm a'}}</p>
+      </li>
+      <li ng-if="!oneVisit">
+        <i class="fa fa-arrow-left arrows" ng-click="previousTenant()"></i>
+        <i class="fa fa-arrow-right arrows" ng-click="nextTenant()"></i>
+        <a><em>Tap arrows to search today's scheduled visits.</em></a>
+      </li>
+      <li>
+        <div class="progress-button">
+          <button><span>Confirm Visit</span></button>
+          <svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+          <svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+          <svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+        </div><!-- /progress-button -->
+      </li>
+    </ul>
+  </nav>
+</div>

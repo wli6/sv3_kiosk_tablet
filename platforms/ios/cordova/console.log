@@ -1,0 +1,31 @@
+2015-09-16 23:54:46.265 SV3Kiosk[3565:34451] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/wenbinli/Library/Developer/CoreSimulator/Devices/9E97EBB0-EBA5-4086-908D-0844C67C2258/data/Containers/Data/Application/5977E24C-F14F-435F-AE39-FF405FF6CD20/Library/Cookies/Cookies.binarycookies
+2015-09-16 23:54:46.645 SV3Kiosk[3565:34451] Apache Cordova native platform version 3.8.0 is starting.
+2015-09-16 23:54:46.646 SV3Kiosk[3565:34451] Multi-tasking -> Device: YES, App: YES
+2015-09-16 23:54:46.673 SV3Kiosk[3565:34451] Unlimited access to network resources
+2015-09-16 23:54:46.685 SV3Kiosk[3565:34451] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-09-16 23:54:48.160 SV3Kiosk[3565:34451] Resetting plugins due to page load.
+2015-09-16 23:54:48.283 SV3Kiosk[3565:34451] Finished load of: file:///Users/wenbinli/Library/Developer/CoreSimulator/Devices/9E97EBB0-EBA5-4086-908D-0844C67C2258/data/Containers/Bundle/Application/8A94E927-CA81-46CE-BC45-401E237280D3/SV3Kiosk.app/www/index.html
+2015-09-16 23:54:50.352 SV3Kiosk[3565:34451] Resetting plugins due to page load.
+2015-09-17 00:06:17.107 SV3Kiosk[4106:45624] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/wenbinli/Library/Developer/CoreSimulator/Devices/9E97EBB0-EBA5-4086-908D-0844C67C2258/data/Containers/Data/Application/C2155B71-944C-4407-B740-61F5E1188675/Library/Cookies/Cookies.binarycookies
+2015-09-17 00:06:17.535 SV3Kiosk[4106:45624] Apache Cordova native platform version 3.8.0 is starting.
+2015-09-17 00:06:17.536 SV3Kiosk[4106:45624] Multi-tasking -> Device: YES, App: YES
+2015-09-17 00:06:17.567 SV3Kiosk[4106:45624] Unlimited access to network resources
+2015-09-17 00:06:17.583 SV3Kiosk[4106:45624] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-09-17 00:06:18.423 SV3Kiosk[4106:45624] Resetting plugins due to page load.
+2015-09-17 00:06:18.554 SV3Kiosk[4106:45624] Finished load of: file:///Users/wenbinli/Library/Developer/CoreSimulator/Devices/9E97EBB0-EBA5-4086-908D-0844C67C2258/data/Containers/Bundle/Application/2752F324-9387-4EC2-88D6-DBACE68344F9/SV3Kiosk.app/www/index.html
+2015-09-17 00:06:20.603 SV3Kiosk[4106:45624] Resetting plugins due to page load.
+2015-09-17 00:06:21.037 SV3Kiosk[4106:45624] Finished load of: file:///Users/wenbinli/Library/Developer/CoreSimulator/Devices/9E97EBB0-EBA5-4086-908D-0844C67C2258/data/Containers/Bundle/Application/2752F324-9387-4EC2-88D6-DBACE68344F9/SV3Kiosk.app/www/html/index.html#/

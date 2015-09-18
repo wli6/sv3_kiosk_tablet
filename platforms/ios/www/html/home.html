@@ -1,0 +1,49 @@
+<div class="container">
+  <div id="first" class="grid box">
+    <figure class="effect-ming">
+      <img src="../images/pivcard.gif">
+      <figcaption class="piv-figure">
+        <h2>PIV Card</h2>
+        <p class="info-text">Please insert your PIV card and enter your PIN number using the HID Omnikey scanner</p>
+        <p class="loading-gif" ng-if="pivLoading"><i class="fa fa-circle-o-notch fa-spin"></i></p>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div id="second" class="grid box">
+    <figure class="effect-ming">
+      <img src="../images/dln.gif">
+      <figcaption>
+        <h2>Driver's License</h2>
+        <p class="info-text">Please scan your license using the Assuretec scanner</p>
+        <p class="loading-gif" ng-if="dlLoading"><i class="fa fa-circle-o-notch fa-spin"></i></p>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div id="fourth" class="grid box">
+    <figure class="effect-ming">
+      <img src="../images/passport.gif">
+      <figcaption>
+        <h2>Passport</h2>
+        <p class="info-text">Please scan your passport using the Assuretec scanner</p>
+        <p class="loading-gif" ng-if="ppLoading"><i class="fa fa-circle-o-notch fa-spin"></i></p>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div id="third" class="grid box">
+    <figure class="effect-ming">
+      <img src="../images/barcode.gif">
+      <figcaption>
+        <h2>QR Code / Bar Code</h2>
+        <p class="info-text">Please scan your QR Code using the scanner below</p>
+        <p class="loading-gif" ng-if="qrLoading"><i class="fa fa-circle-o-notch fa-spin"></i></p>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
+<piv-overlay></piv-overlay>
+<license-overlay></license-overlay>
+<barcode-overlay></barcode-overlay>

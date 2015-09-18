@@ -1,0 +1,19 @@
+{
+    "version": "0.0.1",
+    "name": "org.pluginporo.barcode_scan_plugin",
+    "cordova_name": "Barcode Scan Plugin",
+    "description": "Barcode Scan Plugin for Cordova",
+    "license": "Apache 2.0",
+    "keywords": [
+        "cordova",
+        " 1d barcode",
+        " 2d barcode",
+        " pdf417 barcode",
+        " plugin",
+        " camera"
+    ],
+    "platforms": [
+        "android"
+    ],
+    "engines": []
+}

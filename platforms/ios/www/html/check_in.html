@@ -1,0 +1,28 @@
+<div id="back-btn">
+  <i class="fa fa-arrow-circle-left" ng-click="goBack()" ng-if="showBackBtn"></i>
+  <i class="fa fa-camera" ng-if="!showBackBtn"></i>
+</div>
+<video id="v"></video>
+<canvas id="c"></canvas>
+
+<h1 id="timer"></h1>
+
+<div id="webcam-info">
+  <h2>{{visit.visitor.name | uppercase}}</h2>
+  <hr>
+  <img src="../images/person-placeholder.jpg" alt="Filler_Image" id="person-placeholder">
+  <hr>
+  <div ng-if="visit">
+    <h3>Visiting {{visit.tenant_contact.name | uppercase}} at {{visit.tenant.name | uppercase}}</h3>
+    <br>
+    <span ng-if="visit.tenant.floor || visit.tenant.suite">Located: {{visit.tenant.floor}} {{visit.tenant.suite}}<br></span>
+    Date: {{visit.visit_start_time | date: 'MM/dd/yy'}} <br>
+    Time: {{visit.visit_start_time | date:'hh:mm a'}} - {{visit.visit_end_time | date: 'hh:mm a'}}<br>
+  </div>
+  <div class="progress-button" id="print-btn" ng-click="printBadge(badgeInfo)">
+    <button><span>Print Badge</span></button>
+    <svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+    <svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+    <svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+  </div>
+</div>

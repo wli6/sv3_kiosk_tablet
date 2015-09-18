@@ -1,0 +1,25 @@
+{
+  "main": "html/index.html",
+  "name": "kiosk",
+  "version": "0.1.0",
+  "chromium-args": "--ignore-certificate-errors",
+  "keywords": [ ],
+  "window": {
+    "title": "Kiosk",
+    "icon": "icons/icon.ico",
+    "frame": false,
+    "resizable": true,
+    "toolbar": true,
+    "kiosk": false,
+    "position": "center",
+    "width": 2560,
+    "height": 1440,
+    "min_width": 1024,
+    "min_height": 768,
+    "max_width": 1980,
+    "max_height": 1440
+  },
+  "webkit": {
+    "plugin": true
+  }
+}

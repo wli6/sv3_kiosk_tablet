@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="../css/libs/search-animations.css">
+
+<div class="container">
+  <aside class="sidebar clearfix">
+    <nav>
+      <!-- <a href="#"><i class="fa fa-fw fa-comments-o"></i></a>
+      <a href="#"><i class="fa fa-fw fa-heart-o"></i></a>
+      <a href="#"><i class="fa fa-fw fa-send-o"></i></a>
+      <a href="#"><i class="fa fa-fw fa-smile-o"></i></a> -->
+    </nav>
+  </aside>
+  <div id="morphsearch" class="morphsearch">
+    <form class="morphsearch-form">
+      <input class="morphsearch-input" type="search" placeholder="Search Tenants" ng-focus="showOverlay()" ng-model="query"/>
+      <button class="morphsearch-submit" type="submit">Search</button>
+    </form>
+    <div class="morphsearch-content">
+      <div class="dummy-column">
+        <h2>Tenants</h2>
+        <div class="dummy-column-content">
+          <div ng-repeat="t in tenantResults track by $index | filter:query | orderBy:'name' ">
+            <a ng-click="selectTenant(t)" class="dummy-media-object">
+              <img src="http://placehold.it/650x650.png&text=TENANT" class="round">
+              <h3>{{t.name}}</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="dummy-column">
+        <h2>Today's Visits</h2>
+        <em ng-if="noToday">No visits scheduled today for {{tenant.name}}.</em>
+        <div class="dummy-column-content">
+          <div ng-repeat="tv in todaysVisits track by $index | orderBy: 'name'">
+            <a ng-click="selectVisit(tv)" class="dummy-media-object">
+              <img src="http://placehold.it/650x650.png&text=VISITOR" class="round">
+              <h3>
+                {{tv.name}} <br>
+                {{tv.visit_start_time}} - {{tv.visit_end_time}}
+              </h3>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="dummy-column">
+        <h2>Past Visits</h2>
+        <em ng-if="noPast">No previous visits scheduled for {{tenant.name}}</em>
+        <div class="dummy-column-content">
+          <div ng-repeat="pv in pastVisits track by $index">
+            <a ng-click="selectPV(pv)" class="dummy-media-object">
+              <img src="http://placehold.it/650x650.png&text=VISITOR" class="round">
+              <h3>
+                {{pv.name}} <i class="fa fa-angle-double-right"></i> {{pv.tenant.name }}<br>
+                {{pv.visit_date | date: 'MM/dd/yy'}}: {{pv.visit_start_time}} - {{pv.visit_end_time}}
+              </h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div><!-- /morphsearch-content -->
+    <span class="morphsearch-close" ng-click="closeOverlay()"></span>
+  </div><!-- /morphsearch -->
+  <header class="codrops-header">
+    <h1 ng-if="!overlay">Welcome to VMS <em>beta</em><span>Search for scheduled visitors.</span></h1>
+  </header>
+  <div class="search-overlay"></div>
+</div><!-- /container -->
